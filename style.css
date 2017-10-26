@@ -1,0 +1,13 @@
+#wrapper {
+    width: 1001px;
+    overflow: hidden;
+}
+#first {
+    width: 500px;
+    float: left; 
+ }
+#second {
+	width: 500px;
+	overflow: hidden;
+    
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+   
+   <title> Temperatura</title>
+   
+   <!-- odswierzanie co minute -->
+   <!--
+   <meta http-equiv="refresh" content="60" >
+   -->
+   <!-- imports -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"> </script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"> </script>
+    <script type="text/javascript" src="./js/g_maly.js"> </script>
+	<script type="text/javascript" src="./js/g_maly_10m.js"> </script>
+	<script type="text/javascript" src="./js/g_okno.js"> </script>
+	<script type="text/javascript" src="./js/g_okno_10m.js"> </script>
+	
+	<link rel="icon" type="image/ico" href="favicon.ico" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+
+<!-- google analytics -->
+
+	<script>
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ 	 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ 	 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ 	 ga('create', 'UA-8028131-4', 'auto');
+ 	 ga('send', 'pageview');
+
+	</script>
+
+</head>
+<body >
+
+	<!-- Nick podgladacz kodow -->
+
+	<!--  stupid bloody google charts : / -->
+	<!--
+	<div id="wrapper">
+		<div id="first">
+			<div id='g_maly'     style='width: 500px; height: 250px;'></div>
+		</div>
+		<div id ="second">
+			<div id='g_maly_10m' style='width: 500px; height: 250px;'></div>
+		</div>
+	</div>
+	
+	<div id="wrapper">
+		<div id="first">
+			<div id='g_okno'     style='width: 500px; height: 250px;'></div>	
+			
+		</div>
+		<div id="second">
+			<div id='g_okno_10m' style='width: 500px; height: 250px;'></div>
+		</div>
+	</div>
+	-->
+
+	
+<!-- za oknem Dallas-->
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/72126/charts/2?&results=66&dynamic=true&yaxis=Temperature%20*C&title=Outside"></iframe>
+<!-- za oknem 24h -->
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/72126/charts/2?days=1&dynamic=true&title=Outside (24h)&type=line&yaxis=Temperature+%2AC"></iframe>
+
+	<br>
+	
+<!-- w pokoju Dallas-->
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/72126/charts/1?&results=66&dynamic=true&yaxis=Temperature%20*C&title=Inside"></iframe>
+<!-- w pokoju 24h  -->
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/72126/charts/1?days=1&dynamic=true&title=Inside (24h)&type=line&xaxis=Date&yaxis=Temperature+%2AC"></iframe>
+
+	<br>
+	
+<!-- w pokoju DTH11 wilgotnosc -->
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/72126/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidity&type=line&yaxis=%25"></iframe>
+<!-- w pokoju DTH11 wilgotnosc 24h -->
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/72126/charts/4?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&title=Humidity (24h)&type=line&yaxis=%25"></iframe>
+
+	<br>
+	<a href="10days.html">10 days</a href>
+	<br>
+	<a href="vs.html">in vs out</a href>
+
+
+
+	<footer>
+		<div>
+		© 2015 vegetKa  ¯\_(ツ)_/¯   
+		</div>
+	</footer>
+	</body>
+</html>
